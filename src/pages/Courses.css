@@ -1,0 +1,664 @@
+/* Courses.css - Redesign */
+
+.courses-page-new {
+  font-family: 'Inter', sans-serif;
+  color: #0b1120;
+  background-color: #fafbfc;
+}
+
+/* ==================================================================
+   Courses Hero Section
+   ================================================================== */
+.courses-hero {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #f0f7ff 0%, #eef2ff 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.courses-hero-grid {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.courses-hero .hero-content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.courses-hero .subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.courses-hero .hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.courses-hero .hero-desc {
+  font-size: 1.1rem;
+  color: #475569;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.hero-stats-row {
+  display: flex;
+  gap: 30px;
+}
+
+.hero-stat {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.hero-stat .stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-stat .stat-info strong {
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+.hero-stat .stat-info span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+/* Hero Visual & Blob */
+.courses-hero .hero-visual {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-blob-container {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  background: linear-gradient(135deg, #60a5fa 0%, #c084fc 100%);
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.blob-image {
+  width: 90%;
+  height: 95%;
+  background: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop') center/cover no-repeat;
+  border-radius: 40% 60% 70% 30% / 40% 50% 60% 50%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.floating-text {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  color: #2563eb;
+  font-family: 'Caveat', cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  transform: rotate(-10deg);
+}
+
+.floating-list-card {
+  position: absolute;
+  left: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 180px;
+}
+
+.list-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.list-item div:not(.icon-circle) {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item strong {
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+
+.list-item span {
+  font-size: 0.7rem;
+  color: #64748b;
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-light-blue { background: #e0f2fe; }
+.bg-light-purple { background: #f3e8ff; }
+.bg-light-green { background: #d1fae5; }
+
+.floating-badge {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.floating-badge strong {
+  font-size: 0.9rem;
+  color: #1e293b;
+}
+.floating-badge span {
+  font-size: 0.8rem;
+}
+
+/* ==================================================================
+   Main Content Area (Grid + Sidebar)
+   ================================================================== */
+.courses-main-content {
+  padding: 60px 0;
+  background: white;
+}
+
+.layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 40px;
+}
+
+/* Left Content */
+.top-filter-tabs {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.top-tab-btn {
+  padding: 10px 24px;
+  border-radius: 30px;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.top-tab-btn:hover {
+  background: #f1f5f9;
+}
+
+.top-tab-btn.active {
+  background: #2563eb;
+  color: white;
+  border-color: #2563eb;
+}
+
+.section-header-left h2 {
+  font-size: 2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+.section-header-left p {
+  color: #475569;
+  margin-bottom: 30px;
+}
+
+.courses-grid-3 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+/* Sidebar */
+.sidebar-right {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 14px 20px 14px 45px;
+  border: 1px solid #e2e8f0;
+  border-radius: 30px;
+  outline: none;
+  font-size: 0.95rem;
+}
+
+.search-box input:focus {
+  border-color: #2563eb;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+}
+
+.filter-box, .help-box {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+}
+
+.filter-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.filter-group {
+  margin-bottom: 25px;
+}
+
+.filter-group h4 {
+  font-size: 0.95rem;
+  color: #334155;
+  margin-bottom: 15px;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+.filter-option input {
+  margin-right: 12px;
+  width: 16px;
+  height: 16px;
+  accent-color: #2563eb;
+}
+
+.option-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+.option-count {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+
+.help-box {
+  text-align: center;
+  background: #f8fbff;
+}
+
+.help-box h4 {
+  margin: 20px 0 10px;
+  font-size: 1.2rem;
+}
+
+.help-box p {
+  font-size: 0.9rem;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* ==================================================================
+   Why Choose Our Courses
+   ================================================================== */
+.why-choose-courses {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 70px;
+  height: 70px;
+  background: #eff6ff;
+  color: #2563eb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.feature-card h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #0f172a;
+}
+
+.feature-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ==================================================================
+   Bottom CTA Banner
+   ================================================================== */
+.courses-bottom-cta {
+  padding: 60px 0;
+  background: #f8fafc;
+}
+
+.cta-banner-img {
+  background: linear-gradient(135deg, rgba(37,99,235,0.95), rgba(79,70,229,0.9)), url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop') center/cover;
+  border-radius: 24px;
+  padding: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-banner-content {
+  max-width: 600px;
+  z-index: 2;
+}
+
+.cta-banner-content h2 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+}
+
+.cta-banner-content p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+.decorative-text-white {
+  font-family: 'Caveat', cursive;
+  font-size: 2.5rem;
+  line-height: 1.2;
+  display: block;
+}
+
+.decorative-arrow-white {
+  font-size: 2rem;
+  margin-top: 10px;
+  display: inline-block;
+  transform: rotate(45deg);
+}
+
+.cta-decoration-right {
+  text-align: right;
+  z-index: 2;
+}
+
+.btn-white-rounded {
+  background: white;
+  color: #2563eb;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.btn-white-rounded:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* ==================================================================
+   Course Card Styles
+   ================================================================== */
+.course-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+.course-img-wrapper {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.course-type-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #1e293b;
+  backdrop-filter: blur(4px);
+}
+
+.course-content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-content h3 {
+  font-size: 1.25rem;
+  color: #0f172a;
+  margin-bottom: 15px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.course-meta {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.course-uni {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #334155;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.mini-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: white;
+}
+
+.alagappa-logo { background-color: #ef4444; }
+.bharathidasan-logo { background-color: #eab308; }
+
+.course-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.view-link {
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: opacity 0.3s ease;
+}
+
+.view-link:hover {
+  opacity: 0.8;
+}
+
+.text-blue { color: #2563eb; }
+
+.icon-btn-round {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: none;
+  background: #eff6ff;
+  color: #2563eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.icon-btn-round:hover {
+  background: #2563eb;
+  color: white;
+}
+
+/* ==================================================================
+   Mobile Responsiveness
+   ================================================================== */
+@media (max-width: 1024px) {
+  .courses-hero-grid {
+    flex-direction: column;
+    text-align: center;
+  }
+  .courses-hero .hero-content {
+    max-width: 100%;
+  }
+  .hero-stats-row {
+    justify-content: center;
+  }
+  .layout-grid {
+    grid-template-columns: 1fr;
+  }
+  .sidebar-right {
+    order: -1; /* Move sidebar to top on tablet/mobile */
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .courses-hero .hero-title {
+    font-size: 2.2rem;
+  }
+  .image-blob-container {
+    width: 100%;
+    height: 350px;
+  }
+  .floating-list-card, .floating-badge, .floating-text {
+    display: none;
+  }
+  .courses-grid-3 {
+    grid-template-columns: 1fr;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  .cta-banner-img {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+    padding: 40px 20px;
+  }
+  .cta-banner-content h2 {
+    font-size: 2rem;
+  }
+  .cta-decoration-right {
+    text-align: center;
+  }
+}

@@ -1,0 +1,681 @@
+/* About.css - Redesign */
+
+.about-page-new {
+  font-family: 'Inter', sans-serif;
+  color: #0b1120;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Typography & Helpers */
+.subtitle {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.text-blue { color: #2563eb; }
+.text-green { color: #10b981; }
+.text-white-50 { color: rgba(255, 255, 255, 0.7); }
+
+.bg-blue-light { background: #eff6ff; }
+.bg-green-light { background: #ecfdf5; }
+.bg-purple-light { background: #f5f3ff; }
+.bg-orange-light { background: #fff7ed; }
+.bg-yellow-light { background: #fefce8; }
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.section-desc {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Handdrawn elements */
+.handdrawn-text {
+  position: absolute;
+  font-family: 'Caveat', cursive;
+  color: #3b82f6;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* ==================================================================
+   About Hero Section
+   ================================================================== */
+.about-hero {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  position: relative;
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 550px;
+}
+
+.hero-left .hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+.hero-left .hero-desc {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.hero-features {
+  display: flex;
+  gap: 40px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(37,99,235,0.1);
+}
+
+.feature-item span {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+  line-height: 1.3;
+}
+
+/* Hero Right Visuals */
+.hero-right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.hero-img-bg-blob {
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #a78bfa 0%, #60a5fa 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 0;
+  opacity: 0.2;
+}
+
+.hero-img {
+  width: 100%;
+  border-radius: 24px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.floating-card-brand {
+  position: absolute;
+  bottom: -30px;
+  left: -40px;
+  background: white;
+  padding: 15px 25px;
+  border-radius: 16px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  z-index: 2;
+}
+
+.brand-logo {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2563eb;
+  font-style: italic;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-text strong {
+  font-size: 1rem;
+  color: #0f172a;
+  line-height: 1.2;
+}
+
+.brand-text span {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 4px;
+}
+
+.education-text {
+  top: -40px;
+  right: -30px;
+  transform: rotate(5deg);
+}
+.drawn-arrow {
+  font-size: 2rem;
+  align-self: center;
+  margin-top: -10px;
+}
+
+/* ==================================================================
+   Mission Section
+   ================================================================== */
+.mission-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+.mission-image-wrapper {
+  position: relative;
+}
+
+.mission-img {
+  width: 100%;
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+.together-text {
+  top: -30px;
+  left: 30px;
+  transform: rotate(-10deg);
+}
+
+.drawn-arrow-down {
+  font-size: 2rem;
+  margin-left: 20px;
+  margin-top: -5px;
+}
+
+.mv-cards {
+  display: flex;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.mv-card {
+  flex: 1;
+  background: white;
+  border: 1px solid #e2e8f0;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.02);
+}
+
+.mv-icon {
+  width: 48px;
+  height: 48px;
+  background: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.mv-card h4 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.mv-card p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ==================================================================
+   Impact Section
+   ================================================================== */
+.impact-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.impact-header {
+  display: flex;
+  gap: 60px;
+}
+
+.impact-title-area {
+  flex: 1;
+  max-width: 400px;
+}
+
+.impact-title-area h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.impact-title-area p {
+  color: #475569;
+  line-height: 1.6;
+}
+
+.impact-stats {
+  flex: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.03);
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-card h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.stat-card h4 {
+  font-size: 1rem;
+  color: #334155;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.4;
+}
+
+/* ==================================================================
+   Why Choose Us Section
+   ================================================================== */
+.why-choose-us {
+  padding: 100px 0;
+  background: white;
+}
+
+.wcu-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+}
+
+.wcu-left {
+  position: sticky;
+  top: 100px;
+  height: fit-content;
+}
+
+.wcu-left h2 {
+  font-size: 2.5rem;
+  color: #0f172a;
+  margin-bottom: 20px;
+}
+
+.wcu-left p {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.wcu-features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+}
+
+.wcu-feature {
+  background: white;
+  border: 1px solid #f1f5f9;
+  padding: 25px;
+  border-radius: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.wcu-feature:hover {
+  box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+  border-color: #e2e8f0;
+}
+
+.wcu-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.wcu-content h4 {
+  font-size: 1.1rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.wcu-content p {
+  font-size: 0.9rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ==================================================================
+   Partner Universities Section
+   ================================================================== */
+.partners-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+
+.partners-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 60px;
+}
+
+.partners-header h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.partners-header p {
+  color: #475569;
+  max-width: 600px;
+}
+
+.view-all-link {
+  font-weight: 600;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.partners-grid-wrapper {
+  position: relative;
+}
+
+.recognized-text {
+  top: -40px;
+  right: 50px;
+  transform: rotate(5deg);
+}
+
+.drawn-arrow-curved {
+  font-size: 2rem;
+  margin-left: -20px;
+}
+
+.partners-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.partner-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+}
+
+.partner-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+.alagappa-logo-bg { background: #ef4444; }
+.bharathidasan-logo-bg { background: #eab308; }
+
+.partner-info {
+  flex: 1;
+}
+
+.partner-info h4 {
+  font-size: 1.3rem;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.partner-info .location {
+  font-size: 0.9rem;
+  color: #64748b;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.partner-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 15px;
+  border-top: 1px solid #f1f5f9;
+}
+
+.partner-footer span {
+  font-size: 0.9rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.arrow-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #eff6ff;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+/* ==================================================================
+   Team Section
+   ================================================================== */
+.team-section {
+  padding: 100px 0;
+  background: white;
+}
+
+.team-card-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+  border-radius: 24px;
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-left h2 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.team-left p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.btn-white-rounded {
+  background: white;
+  color: #3b82f6;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-white-rounded:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.team-right {
+  position: relative;
+}
+
+.small-team-text {
+  top: -50px;
+  right: -20px;
+  color: rgba(255,255,255,0.9);
+}
+
+.drawn-arrow-curved-white {
+  font-size: 2rem;
+  margin-left: 20px;
+}
+
+.team-members {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img, .brand-circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 15px;
+  border: 3px solid rgba(255,255,255,0.3);
+}
+
+.brand-circle {
+  background: white;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-style: italic;
+  border: none;
+}
+
+.team-member h4 {
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.team-member span {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .impact-header {
+    flex-direction: column;
+  }
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero-grid, .mission-grid, .wcu-grid, .partners-grid, .team-card-gradient {
+    grid-template-columns: 1fr;
+  }
+  .team-members {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+  }
+}

@@ -1,0 +1,126 @@
+/* AdminLogin.css */
+.admin-login-page {
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  padding: 20px;
+}
+
+.admin-login-container {
+  width: 100%;
+  max-width: 420px;
+}
+
+.admin-login-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+}
+
+.admin-login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-login-logo {
+  height: 50px;
+  width: auto;
+  margin-bottom: 20px;
+}
+
+.admin-login-header h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 5px;
+}
+
+.admin-login-header p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.admin-login-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #ef4444;
+  padding: 12px 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 8px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  color: #94a3b8;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  color: #0f172a;
+  background: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.input-wrapper input:focus + .input-icon {
+  color: var(--primary);
+}
+
+.login-btn {
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.admin-login-footer {
+  margin-top: 25px;
+  text-align: center;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 20px;
+}
+
+.admin-login-footer p {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-weight: 500;
+}

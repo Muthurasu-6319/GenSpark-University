@@ -1,0 +1,191 @@
+/* Admissions.css */
+
+.admissions-page {
+  font-family: 'Inter', sans-serif;
+  color: #0f172a;
+}
+
+.section-padding {
+  padding: 80px 0;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.bg-gray-50 {
+  background-color: #f8fafc;
+}
+
+.block {
+  display: block;
+}
+
+/* Hero Section */
+.admin-hero {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #cbd5e1;
+}
+
+.admin-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.admin-hero-content p {
+  font-size: 1.2rem;
+  color: #475569;
+}
+
+.btn-large {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Process Steps */
+.process-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.process-step-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px 25px;
+  position: relative;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.process-step-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  border-color: var(--primary);
+}
+
+.step-indicator {
+  width: 40px;
+  height: 40px;
+  background: var(--primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.process-step-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+}
+
+.process-step-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* Eligibility Section */
+.eligibility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.eligibility-box {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+.eli-header h3 {
+  font-size: 1.5rem;
+  margin-bottom: 25px;
+  color: #0f172a;
+}
+
+.eli-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.eli-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  color: #475569;
+  line-height: 1.6;
+}
+
+/* Documents Section */
+.doc-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.alert-box {
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+  padding: 15px 20px;
+  color: #92400e;
+  border-radius: 4px;
+}
+
+.doc-list-container {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+}
+
+.doc-checklist {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.doc-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 1.1rem;
+  color: #334155;
+  font-weight: 500;
+  padding-bottom: 15px;
+  border-bottom: 1px dashed #e2e8f0;
+}
+
+.doc-checklist li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+@media (max-width: 992px) {
+  .doc-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-hero-content h1 {
+    font-size: 2.5rem;
+  }
+}

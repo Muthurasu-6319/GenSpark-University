@@ -1,0 +1,232 @@
+/* Header.css */
+.header {
+  background-color: var(--card-bg);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  z-index: 101; /* Keep logo above mobile menu */
+}
+
+.logo-img {
+  height: 80px;
+  width: auto;
+}
+
+.logo-highlight {
+  color: var(--primary);
+}
+
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-dark);
+  cursor: pointer;
+  z-index: 101;
+}
+
+.nav-actions-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.main-nav a {
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.status-link {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: color 0.3s ease;
+}
+
+.status-link:hover {
+  color: var(--primary);
+}
+
+/* Dropdown Menu Styles */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-trigger {
+  font-weight: 500;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.dropdown-trigger:hover {
+  color: var(--primary);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: white;
+  min-width: 220px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: flex-start;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  z-index: 100;
+  border: 1px solid #f1f5f9;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  padding: 10px 20px;
+  display: block;
+  font-size: 0.95rem;
+  color: #334155;
+  transition: background 0.2s, color 0.2s;
+}
+
+.dropdown-menu a:hover {
+  background: #f8fafc;
+  color: #2563eb;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1100px) {
+  .nav-actions-wrapper {
+    gap: 15px;
+  }
+  .main-nav ul {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .mobile-menu-toggle {
+    display: block;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+  
+  .header-container {
+    height: 80px;
+  }
+
+  .nav-actions-wrapper {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: white;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 80px 30px 40px;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow-y: auto;
+  }
+
+  .nav-actions-wrapper.mobile-open {
+    right: 0;
+  }
+
+  .main-nav, .header-actions {
+    width: 100%;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .nav-dropdown {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static;
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+    box-shadow: none;
+    border: none;
+    padding-left: 20px;
+    background: #f8fafc;
+    margin-top: 10px;
+    width: 100%;
+    display: none; /* simple approach for mobile, require hover to show */
+  }
+
+  .nav-dropdown:hover .dropdown-menu,
+  .nav-dropdown:active .dropdown-menu,
+  .nav-dropdown:focus-within .dropdown-menu {
+    display: flex;
+  }
+
+  .header-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #f1f5f9;
+  }
+}

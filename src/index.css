@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  /* Matching logo colors: blue and purple gradients */
+  --primary: #0056FF; /* Bright blue from logo */
+  --primary-hover: #0043cc;
+  --secondary: #6B21A8; /* Purple from logo */
+  
+  /* Added Green and Yellow accents */
+  --accent-green: #10B981;
+  --accent-yellow: #FBBF24;
+  
+  --text-dark: #0F172A;
+  --text-light: #64748B;
+  --bg-color: #FAFAFA;
+  --card-bg: #FFFFFF;
+  --border-color: #E2E8F0;
+  
+  --gradient-primary: linear-gradient(135deg, #0056FF 0%, #8B5CF6 100%);
+  --gradient-accent: linear-gradient(135deg, #FBBF24 0%, #F59E0B 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Outfit', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-dark);
+  line-height: 1.6;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background: var(--gradient-accent);
+  color: #0F172A; /* Dark text for yellow button */
+  box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(251, 191, 36, 0.4);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.section-title {
+  font-size: 2.75rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  color: var(--text-dark);
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--text-light);
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  font-size: 1.1rem;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+/* Utilities */
+.text-gradient {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
