@@ -31,11 +31,11 @@ const Home = () => {
           </p>
           <div className="hero-actions">
             <Link to="/courses" className="btn btn-primary">Explore Courses <ArrowRight size={16} className="ml-2" /></Link>
-            <button className="btn btn-outline watch-video-btn"><div className="play-icon-wrapper"><div className="play-triangle"></div></div> Watch Video</button>
+            <Link to="/apply-now" className="btn btn-outline">Admission Now</Link>
           </div>
           <div className="hero-stats">
             <div className="stat-item">
-              <div className="stat-icon-wrapper"><GraduationCap className="stat-icon" size={24} color="#3b82f6" /></div>
+              <div className="stat-icon-wrapper"><GraduationCap className="stat-icon" size={18} color="#3b82f6" /></div>
               <div className="stat-text">
                 <span className="stat-value">UG / PG / MBA</span>
                 <span className="stat-label">Wide Range of Courses</span>
@@ -43,7 +43,7 @@ const Home = () => {
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <div className="stat-icon-wrapper"><User className="stat-icon" size={24} color="#3b82f6" /></div>
+              <div className="stat-icon-wrapper"><User className="stat-icon" size={18} color="#3b82f6" /></div>
               <div className="stat-text">
                 <span className="stat-value">Expert Faculty</span>
                 <span className="stat-label">Learn from the Best</span>
@@ -51,7 +51,7 @@ const Home = () => {
             </div>
             <div className="stat-divider"></div>
             <div className="stat-item">
-              <div className="stat-icon-wrapper"><Medal className="stat-icon" size={24} color="#3b82f6" /></div>
+              <div className="stat-icon-wrapper"><Medal className="stat-icon" size={18} color="#3b82f6" /></div>
               <div className="stat-text">
                 <span className="stat-value">Trusted & Recognized</span>
                 <span className="stat-label">Build Your Career</span>
@@ -65,16 +65,11 @@ const Home = () => {
               <text x="20" y="40" fontFamily="Caveat, cursive" fontSize="32" fontWeight="bold" fill="#2563eb" transform="rotate(-10 20 40)">Better</text>
               <text x="60" y="80" fontFamily="Caveat, cursive" fontSize="38" fontWeight="bold" fill="#2563eb" transform="rotate(-10 60 80)">Education</text>
               <text x="70" y="120" fontFamily="Caveat, cursive" fontSize="32" fontWeight="bold" fill="#2563eb" transform="rotate(-10 70 120)">Brighter Future</text>
-              <path d="M70 130 Q 150 140 220 100" stroke="#facc15" strokeWidth="3" strokeDasharray="6 6" fill="none" />
-              <path d="M220 100 L 250 80 L 230 110 Z" fill="#2563eb" />
-              <path d="M220 100 L 235 95 L 230 110 Z" fill="#60a5fa" />
-              <circle cx="180" cy="85" r="4" fill="#facc15" />
-              <path d="M180 75 L 182 83 L 190 85 L 182 87 L 180 95 L 178 87 L 170 85 L 178 83 Z" fill="#facc15" />
+
             </svg>
           </div>
           <div className="hero-image-wrapper">
              <img src="/girl.png" alt="Student" className="hero-graphic" />
-             <img src="/books.png" alt="Books" className="floating-books" />
           </div>
           
           <div className="floating-card course-card">
@@ -88,16 +83,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="floating-card admission-card">
-            <div className="card-icon text-blue"><FileText size={24} color="#3b82f6" /></div>
-            <div className="card-text">
-              <strong>Easy<br/>Admission</strong>
-              <span>Apply Online</span>
-            </div>
-             <div className="dots-container">
-               <span className="dot"></span><span className="dot active"></span><span className="dot"></span>
-            </div>
-          </div>
+
 
           <div className="floating-card skill-card">
             <div className="card-icon text-blue"><Landmark size={24} color="#3b82f6" /></div>
@@ -107,13 +93,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="floating-card campus-card">
-            <div className="card-icon text-blue"><Building2 size={24} color="#3b82f6" /></div>
-            <div className="card-text">
-              <strong>Modern<br/>Campus</strong>
-              <span>Safe & Supportive</span>
-            </div>
-          </div>
+
         </div>
       </section>
 

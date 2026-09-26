@@ -1,314 +1,261 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './AlagappaUniversity.css';
 import { Link } from 'react-router-dom';
 import { 
-  MapPin, Calendar, BookOpen, GraduationCap, 
-  ChevronDown, CheckCircle2, ArrowRight, Library, Layers, Award
+  GraduationCap, Award, Users, Building, 
+  Landmark, MapPin, Star, Library, 
+  Check, ArrowRight, FileText, Navigation, Headset, BookOpen, MonitorPlay, Briefcase
 } from 'lucide-react';
 
 const AlagappaUniversity = () => {
-  const [activeFaq, setActiveFaq] = useState(null);
-
-  const toggleFaq = (index) => {
-    setActiveFaq(activeFaq === index ? null : index);
-  };
-
-  const faqs = [
-    {
-      q: "Is Alagappa University UGC recognized?",
-      a: "Yes, Alagappa University is recognized by the University Grants Commission (UGC) and is accredited with a NAAC A+ grade."
-    },
-    {
-      q: "Does the university offer distance education?",
-      a: "Yes, Gen Spark Distance Academy facilitates admissions to numerous programs offered through Alagappa University's Directorate of Distance Education (DDE)."
-    },
-    {
-      q: "Where is the campus located?",
-      a: "The main campus is located in Karaikudi, Sivaganga District, Tamil Nadu, spread across a lush 435.98-acre eco-friendly environment."
-    },
-    {
-      q: "Can I pay fees in installments?",
-      a: "Yes, Gen Spark provides EMI facilities and lowest fees for distance education admissions."
-    }
-  ];
-
   return (
-    <div className="au-page">
-      {/* Hero Section */}
-      <section className="au-hero">
-        <div className="au-hero-overlay"></div>
-        <div className="container au-hero-content">
-          <img src="/images/alagappa-logo.jpg" alt="Alagappa University Logo" className="au-logo-image" />
-          <h1>Alagappa University</h1>
-          <p>Excellence in Action • NAAC A+ Graded State University</p>
-          <a href="#programs" className="btn btn-white-rounded mt-4">Explore Programs <ArrowRight size={18} className="ml-2"/></a>
+    <div className="au-page-redesign">
+      {/* Combined Hero Section */}
+      <section className="au-hero-combined">
+        <div className="container">
+          <div className="au-header-grid">
+            <div className="au-header-left">
+              <span className="subtitle text-blue">UNIVERSITY COLLABORATION</span>
+              <h1 className="hero-title">
+                Alagappa University<br />
+                <span className="text-light-blue">in Collaboration with</span><br />
+                <span className="text-blue">Gen Spark University</span>
+              </h1>
+              <p className="hero-desc">
+                Your Gateway to Quality Education, Industry-Relevant<br/>Learning and a Brighter Future.
+              </p>
+              <div className="hero-actions">
+                <Link to="/courses?uni=alagappa" className="btn btn-primary">Explore Programs <ArrowRight size={16}/></Link>
+                <Link to="/apply-now" className="btn btn-outline">Apply Now <ArrowRight size={16}/></Link>
+              </div>
+            </div>
+            
+            <div className="au-header-right">
+               <div className="collab-logos">
+                 <div className="au-logo-wrap">
+                   <img src="/images/alagappa-logo.jpg" alt="Alagappa Logo" className="au-main-logo" />
+                   <span>ALAGAPPA UNIVERSITY</span>
+                 </div>
+                 <span className="logo-cross">X</span>
+                 <div className="gs-logo-wrap">
+                   <img src="/images/GenSpark-landscape-logo.png" alt="Gen Spark Logo" className="gs-main-logo" />
+                 </div>
+               </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="container floating-stats-wrapper">
+           <div className="floating-stats-bar">
+             <div className="stat-item">
+               <div className="stat-icon"><GraduationCap size={28} color="#0064ff"/></div>
+               <div className="stat-text">
+                 <h4>UG, PG & MBA</h4>
+                 <p>Wide range of programs</p>
+               </div>
+             </div>
+             <div className="stat-divider"></div>
+             <div className="stat-item">
+               <div className="stat-icon"><Award size={28} color="#0064ff"/></div>
+               <div className="stat-text">
+                 <h4>Recognized University</h4>
+                 <p>UGC Approved</p>
+               </div>
+             </div>
+             <div className="stat-divider"></div>
+             <div className="stat-item">
+               <div className="stat-icon"><Users size={28} color="#0064ff"/></div>
+               <div className="stat-text">
+                 <h4>Expert Guidance</h4>
+                 <p>Admission & Career Support</p>
+               </div>
+             </div>
+             <div className="stat-divider"></div>
+             <div className="stat-item">
+               <div className="stat-icon"><Building size={28} color="#0064ff"/></div>
+               <div className="stat-text">
+                 <h4>Industry Collaboration</h4>
+                 <p>Bridging Education & Industry</p>
+               </div>
+             </div>
+           </div>
         </div>
       </section>
 
-      {/* About Section */}
+      {/* About Alagappa Section */}
       <section className="au-about-section">
         <div className="container">
           <div className="au-about-grid">
-            <div className="au-about-text">
-              <span className="subtitle text-blue">ABOUT UNIVERSITY</span>
-              <h2>A Legacy of Academic Excellence</h2>
-              <p>
-                Alagappa University is located at Karaikudi in Tamil Nadu and is accessible from Madurai and Tiruchirappalli Airports within two hours. The 435.98-acre green and lush campus houses all the academic activities. The University emerged from the galaxy of institutions initially founded by the great philanthropist and educationist Dr. RM. Alagappa Chettiar during the 1950s.
+            <div className="au-about-left">
+              <span className="subtitle text-blue">ABOUT ALAGAPPA UNIVERSITY</span>
+              <h2 className="section-title">A Legacy of Excellence<br/>in Education</h2>
+              <p className="section-desc">
+                Alagappa University, established in 1985, is a premier institution in Tamil Nadu, known for its commitment to academic excellence, research and innovation. With a strong legacy and modern infrastructure, it offers a wide range of undergraduate, postgraduate and research programs.
               </p>
-              <p>
-                Established in May 1985, Alagappa University offers regular, distance, online, and collaborative programs. It is recognized by the UGC, member of AIU and ACU, and comprises 44 Departments and 3 Centres. Gen Spark Distance Academy is proud to partner and offer direct admissions for these esteemed programs.
-              </p>
+              <Link to="/courses?uni=alagappa" className="btn btn-outline-small">Learn More <ArrowRight size={14}/></Link>
             </div>
             
-            <div className="au-highlights-grid">
-              <div className="au-highlight-card">
-                <Calendar size={28} className="text-blue mb-3" />
-                <h4>Established</h4>
-                <p>May 1985</p>
-              </div>
-              <div className="au-highlight-card">
-                <MapPin size={28} className="text-blue mb-3" />
-                <h4>Location</h4>
-                <p>Karaikudi, Tamil Nadu</p>
-              </div>
-              <div className="au-highlight-card">
-                <Library size={28} className="text-blue mb-3" />
-                <h4>Academic Areas</h4>
-                <p>44 Departments & 3 Centres</p>
-              </div>
-              <div className="au-highlight-card">
-                <Award size={28} className="text-blue mb-3" />
-                <h4>Recognitions</h4>
-                <p>UGC, AIU, ACU, NAAC A+</p>
+            <div className="au-about-right">
+              <div className="au-info-card">
+                 <div className="info-row">
+                   <div className="info-item">
+                     <div className="info-icon"><Landmark size={24} color="#0064ff"/></div>
+                     <div className="info-text">
+                       <h5>Established</h5>
+                       <p>1985</p>
+                     </div>
+                   </div>
+                   <div className="info-item">
+                     <div className="info-icon"><MapPin size={24} color="#0064ff"/></div>
+                     <div className="info-text">
+                       <h5>Location</h5>
+                       <p>Karaikudi, Tamil Nadu</p>
+                     </div>
+                   </div>
+                 </div>
+                 
+                 <div className="info-row">
+                   <div className="info-item">
+                     <div className="info-icon"><Star size={24} color="#0064ff"/></div>
+                     <div className="info-text">
+                       <h5>Accreditation</h5>
+                       <p>UGC Recognized</p>
+                     </div>
+                   </div>
+                   <div className="info-item">
+                     <div className="info-icon"><Users size={24} color="#0064ff"/></div>
+                     <div className="info-text">
+                       <h5>Programs</h5>
+                       <p>UG / PG / MBA / Research</p>
+                     </div>
+                   </div>
+                 </div>
+
+                 <div className="info-row full-width">
+                   <div className="info-item">
+                     <div className="info-icon"><Award size={24} color="#0064ff"/></div>
+                     <div className="info-text">
+                       <h5>Reputation</h5>
+                       <p>One of the leading universities in Tamil Nadu</p>
+                     </div>
+                   </div>
+                 </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Available Programs Section */}
-      <section id="programs" className="au-programs-section bg-gray-50">
+      {/* Courses Available Section */}
+      <section className="au-courses-section">
         <div className="container">
-          <div className="text-center mb-12">
-            <span className="subtitle text-blue">ACADEMICS</span>
-            <h2 className="section-title">Available Programs</h2>
-            <p className="section-desc max-w-2xl mx-auto">
-              Discover a comprehensive range of undergraduate and postgraduate courses.
-            </p>
-          </div>
-
-          <div className="au-course-grid">
-            {/* UG Arts */}
-            <div className="au-course-category">
-              <div className="au-category-header bg-blue-gradient">
-                <GraduationCap size={24} color="white" />
-                <h3>UG Program - Arts</h3>
-              </div>
-              <ul className="au-course-list">
-                <li>B.A Tamil</li>
-                <li>B.A English</li>
-                <li>B.A History</li>
-                <li>B.A Economics</li>
-                <li>B.A Public Administration</li>
-                <li>B.Lit Tamil</li>
-                <li>B.B.A (Bachelor of Business Administration)</li>
-                <li>B.Com (General)</li>
-                <li>B.Com (Computer Application)</li>
-              </ul>
-            </div>
-
-            {/* UG Science */}
-            <div className="au-course-category">
-              <div className="au-category-header bg-dark-gradient">
-                <BookOpen size={24} color="white" />
-                <h3>UG Program - Science</h3>
-              </div>
-              <ul className="au-course-list">
-                <li>B.Sc Mathematics</li>
-                <li>B.Sc Psychology</li>
-                <li>B.Sc Computer Science</li>
-                <li>B.Sc Information Technology</li>
-                <li>B.C.A (Bachelor of Computer Application)</li>
-              </ul>
-            </div>
-
-            {/* PG Arts & Science */}
-            <div className="au-course-category">
-              <div className="au-category-header bg-dark-gradient">
-                <BookOpen size={24} color="white" />
-                <h3>PG Programs</h3>
-              </div>
-              <ul className="au-course-list">
-                <li>M.A Tamil, English, History, Economics</li>
-                <li>M.A Journalism and Mass Communication</li>
-                <li>M.A Child Care and Education</li>
-                <li>Master of Social Work (MSW)</li>
-                <li>M.Com (General)</li>
-                <li>M.Com (Finance and Control)</li>
-                <li>M.Sc Mathematics, Psychology, Botany</li>
-                <li>M.Sc Zoology, Chemistry, Physics</li>
-                <li>M.Sc Computer Science, Information Technology</li>
-                <li>Master of Computer Application (MCA)</li>
-                <li>Master of Library and Information Science (MLIS)</li>
-              </ul>
-            </div>
-
-            {/* MBA Specializations */}
-            <div className="au-course-category">
-              <div className="au-category-header bg-blue-gradient">
-                <Layers size={24} color="white" />
-                <h3>MBA Specializations</h3>
-              </div>
-              <ul className="au-course-list">
-                <li>MBA General</li>
-                <li>MBA Human Resource Management</li>
-                <li>MBA Marketing / Finance / System / Production</li>
-                <li>MBA Banking & Finance</li>
-                <li>MBA Corporate Secretaryship / Hospital Management</li>
-                <li>MBA Project / Retail / Logistics Management</li>
-                <li>MBA Technology / International Business</li>
-                <li>MBA Tourism / Education Management</li>
-                <li>MBA Co-operative Management</li>
-                <li>MBA Corporate Management</li>
-              </ul>
-            </div>
-            
-            {/* Certifications & Diplomas */}
-            <div className="au-course-category" style={{ gridColumn: '1 / -1' }}>
-              <div className="au-category-header bg-dark-gradient">
-                <Award size={24} color="white" />
-                <h3>Certifications & Diplomas</h3>
-              </div>
-              <div className="au-course-list-multi">
-                <ul>
-                  <li>Certificate in Library and Information Science</li>
-                  <li>Certificate in GST</li>
-                  <li>Certificate in Astrology</li>
-                  <li>Certificate in Office Automation</li>
-                  <li>Certificate in Gender Studies</li>
-                  <li>Diploma in Montessori Education</li>
-                  <li>Diploma in Computer Applications</li>
-                </ul>
-                <ul>
-                  <li>PG Diploma in Hospital Administration</li>
-                  <li>PG Diploma in Personnel Management</li>
-                  <li>PG Diploma in Computer Applications</li>
-                  <li>PG Diploma in Artificial Intelligence and ML</li>
-                  <li>PG Diploma in Cyber Security</li>
-                  <li>PG Diploma in Human Resource Management</li>
-                  <li>PG Diploma in Sports Management</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Admission Eligibility & Process */}
-      <section className="au-admission-section">
-        <div className="container">
-          <div className="au-admission-grid">
-            {/* Eligibility */}
-            <div className="au-eligibility">
-              <span className="subtitle text-blue">REQUIREMENTS</span>
-              <h2 className="mb-6 text-3xl font-bold">Admission Eligibility</h2>
-              
-              <div className="eligibility-card">
-                <h4>For UG Programs</h4>
-                <ul className="custom-list">
-                  <li><CheckCircle2 size={18} className="text-blue" /> Candidates must have passed 10+2 (HSC) or equivalent examination from a recognized board.</li>
-                  <li><CheckCircle2 size={18} className="text-blue" /> For NIOS and BOSSE candidates, Gen Spark provides direct guidance and passing assurance.</li>
-                </ul>
-              </div>
-              
-              <div className="eligibility-card mt-6">
-                <h4>For PG Programs</h4>
-                <ul className="custom-list">
-                  <li><CheckCircle2 size={18} className="text-blue" /> A relevant Bachelor's degree from a recognized university under 10+2+3 pattern.</li>
-                  <li><CheckCircle2 size={18} className="text-blue" /> Direct admission available for Distance Education modes without stringent entrance tests.</li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Process Flow */}
-            <div className="au-process">
-              <span className="subtitle text-blue">HOW TO APPLY</span>
-              <h2 className="mb-6 text-3xl font-bold">Admission Process</h2>
-              
-              <div className="process-timeline">
-                <div className="timeline-step">
-                  <div className="step-number">1</div>
-                  <div className="step-content">
-                    <h4>Contact Gen Spark Academy</h4>
-                    <p>Reach out to our counseling team across Tamil Nadu (Coimbatore, Chennai, Madurai, etc.) for guidance.</p>
-                  </div>
-                </div>
-                <div className="timeline-step">
-                  <div className="step-number">2</div>
-                  <div className="step-content">
-                    <h4>Document Submission</h4>
-                    <p>Submit your 10th, 12th, or UG mark sheets along with ID proof for verification.</p>
-                  </div>
-                </div>
-                <div className="timeline-step">
-                  <div className="step-number">3</div>
-                  <div className="step-content">
-                    <h4>Fee Payment & EMI</h4>
-                    <p>Pay the lowest university fees directly. We also provide flexible EMI options for students.</p>
-                  </div>
-                </div>
-                <div className="timeline-step">
-                  <div className="step-number">4</div>
-                  <div className="step-content">
-                    <h4>Enrollment Confirmation</h4>
-                    <p>Receive your admission letter, ID card, and study materials to start your journey.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQs */}
-      <section className="au-faq-section bg-gray-50">
-        <div className="container">
-          <div className="text-center mb-10">
-            <span className="subtitle text-red">SUPPORT</span>
-            <h2 className="section-title">Frequently Asked Questions</h2>
+          <div className="au-courses-header">
+            <span className="subtitle text-blue center">COURSES AVAILABLE</span>
+            <h2 className="section-title center">Popular Programs at Alagappa University</h2>
+            <p className="section-desc center">Choose from a wide range of programs designed to build your future.</p>
           </div>
           
-          <div className="faq-accordion max-w-3xl mx-auto">
-            {faqs.map((faq, index) => (
-              <div 
-                key={index} 
-                className={`faq-item ${activeFaq === index ? 'active' : ''}`}
-              >
-                <button className="faq-question" onClick={() => toggleFaq(index)}>
-                  {faq.q}
-                  <ChevronDown className="faq-icon" size={20} />
-                </button>
-                <div className="faq-answer">
-                  <p>{faq.a}</p>
-                </div>
+          <div className="au-programs-grid">
+            {/* UG Card */}
+            <div className="program-card">
+              <div className="program-card-header">
+                <div className="card-icon"><GraduationCap size={20} color="#0064ff"/></div>
+                <div className="program-badge">UG PROGRAMS</div>
               </div>
-            ))}
+              <ul className="program-list">
+                <li><Check size={16} color="#0064ff"/> B.Sc Computer Science</li>
+                <li><Check size={16} color="#0064ff"/> B.Sc Information Technology</li>
+                <li><Check size={16} color="#0064ff"/> BCA (Bachelor of Computer Applications)</li>
+              </ul>
+              <Link to="/courses?uni=alagappa&type=UG" className="view-all-link">View All <ArrowRight size={14}/></Link>
+            </div>
+            
+            {/* PG Card */}
+            <div className="program-card">
+              <div className="program-card-header">
+                <div className="card-icon"><Library size={20} color="#0064ff"/></div>
+                <div className="program-badge">PG PROGRAMS</div>
+              </div>
+              <ul className="program-list">
+                <li><Check size={16} color="#0064ff"/> M.Sc Computer Science</li>
+                <li><Check size={16} color="#0064ff"/> MCA (Master of Computer Applications)</li>
+              </ul>
+              <Link to="/courses?uni=alagappa&type=PG" className="view-all-link">View All <ArrowRight size={14}/></Link>
+            </div>
+            
+            {/* MBA Card */}
+            <div className="program-card">
+              <div className="program-card-header">
+                <div className="card-icon"><Briefcase size={20} color="#0064ff"/></div>
+                <div className="program-badge">MBA PROGRAMS</div>
+              </div>
+              <ul className="program-list">
+                <li><Check size={16} color="#0064ff"/> MBA Human Resource Management</li>
+                <li><Check size={16} color="#0064ff"/> MBA Marketing Management</li>
+              </ul>
+              <Link to="/courses?uni=alagappa&type=MBA" className="view-all-link">View All <ArrowRight size={14}/></Link>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="au-bottom-cta">
-        <div className="container text-center">
-          <h2>Ready to take the next step?</h2>
-          <p className="mb-8">Join Alagappa University through Gen Spark Academy for a brighter future.</p>
-          <div className="flex justify-center gap-4">
-            <Link to="/contact" className="btn btn-white-outline">Contact Gen Spark</Link>
-            <Link to="/admissions" className="btn btn-white">Apply Now</Link>
+      {/* Why Choose This Collaboration */}
+      <section className="au-why-collab-section">
+        <div className="container">
+          <div className="au-why-header">
+            <span className="subtitle text-blue center">WHY CHOOSE THIS COLLABORATION?</span>
+            <h2 className="section-title center">More Than Just a Degree</h2>
+          </div>
+          
+          <div className="au-benefits-row">
+            <div className="benefit-item">
+              <FileText size={32} color="#0064ff"/>
+              <h5>Admission Assistance</h5>
+              <p>Step-by-step support</p>
+            </div>
+            <div className="benefit-item">
+              <Navigation size={32} color="#0064ff"/>
+              <h5>Course Guidance</h5>
+              <p>Right program, right career</p>
+            </div>
+            <div className="benefit-item">
+              <Landmark size={32} color="#0064ff"/>
+              <h5>University Support</h5>
+              <p>Direct coordination</p>
+            </div>
+            <div className="benefit-item">
+              <MonitorPlay size={32} color="#0064ff"/>
+              <h5>Online / Distance Learning</h5>
+              <p>Flexible learning options</p>
+            </div>
+            <div className="benefit-item">
+              <BookOpen size={32} color="#0064ff"/>
+              <h5>Study Materials</h5>
+              <p>(If provided)</p>
+            </div>
+            <div className="benefit-item">
+              <Headset size={32} color="#0064ff"/>
+              <h5>Student Support</h5>
+              <p>Always with you</p>
+            </div>
           </div>
         </div>
       </section>
-      
+
+      {/* CTA Footer */}
+      <section className="au-cta-section">
+        <div className="container">
+           <div className="au-cta-content">
+             <div className="cta-left">
+               <h2>Your Journey to a Better Future<br/>Starts Here</h2>
+               <p>Join Alagappa University through Gen Spark University and gain<br/>access to quality education, expert guidance and endless opportunities.</p>
+             </div>
+             <div className="cta-right">
+               <Link to="/apply-now" className="btn btn-primary btn-yellow">Apply Now <ArrowRight size={16}/></Link>
+             </div>
+           </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -2,147 +2,123 @@ import React from 'react';
 import './About.css';
 import { Link } from 'react-router-dom';
 import { 
-  Building2, MonitorPlay, Target, Settings, Settings2, ShieldCheck, 
-  BookOpen, HeartHandshake, Zap, GraduationCap, ArrowRight, User, Star
+  Building2, BookOpen, Target, Settings, Settings2, ShieldCheck, 
+  HeartHandshake, Zap, GraduationCap, ArrowRight, User, Star, MonitorPlay, Briefcase, Award, CheckCircle2, HeadphonesIcon
 } from 'lucide-react';
 
 const About = () => {
   return (
-    <div className="about-page-new">
+    <div className="about-page-redesign">
       {/* Hero Section */}
-      <section className="about-hero">
+      <section className="about-hero-section">
         <div className="container">
           <div className="about-hero-grid">
-            <div className="hero-left">
-              <span className="subtitle text-blue">ABOUT GEN Z NEURAL X</span>
+            <div className="about-hero-content">
+              <span className="subtitle text-blue">ABOUT US</span>
               <h1 className="hero-title">
-                Building a Brighter<br />
-                Future Through<br />
-                <span className="text-blue">Education & Technology</span>
+                Your Education,<br />
+                Our <span className="text-blue">Collaboration</span>
               </h1>
               <p className="hero-desc">
-                Gen Z Neural X is a next-generation education and technology company, bridging the gap between students and universities through innovative learning solutions and digital platforms.
+                <strong>Gen Spark University</strong> is a smart education initiative by Gen Spark, designed to bring the best of university education to every learner. We collaborate with reputed universities to offer quality, flexible and future-ready courses that match your goals and aspirations.
               </p>
               
-              <div className="hero-features">
-                <div className="feature-item">
-                  <div className="feature-icon-wrapper"><Building2 size={24} color="#3b82f6"/></div>
-                  <span>University<br/>Collaboration</span>
+              <div className="hero-badges">
+                <div className="badge-item">
+                  <div className="badge-icon bg-blue-light"><ShieldCheck size={20} color="#0064ff"/></div>
+                  <span>Trusted<br/>Universities</span>
                 </div>
-                <div className="feature-item">
-                  <div className="feature-icon-wrapper"><MonitorPlay size={24} color="#3b82f6"/></div>
-                  <span>Modern<br/>Learning</span>
+                <div className="badge-item">
+                  <div className="badge-icon bg-blue-light"><BookOpen size={20} color="#0064ff"/></div>
+                  <span>Industry-Aligned<br/>Courses</span>
                 </div>
-                <div className="feature-item">
-                  <div className="feature-icon-wrapper"><Target size={24} color="#3b82f6"/></div>
-                  <span>Career<br/>Focused</span>
+                <div className="badge-item">
+                  <div className="badge-icon bg-blue-light"><Target size={20} color="#0064ff"/></div>
+                  <span>Better Career<br/>Opportunities</span>
                 </div>
               </div>
             </div>
             
-            <div className="hero-right">
-              <div className="hero-image-wrapper">
-                <div className="hero-img-bg-blob"></div>
-                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop" alt="University Students" className="hero-img" />
-                
-                {/* Floating Elements */}
-                <div className="floating-card-brand">
-                  <div className="brand-logo">N</div>
-                  <div className="brand-text">
-                    <strong>GEN Z<br/>NEURAL X</strong>
-                    <span>Learn • Grow • Build</span>
-                  </div>
-                </div>
-                
-                <div className="handdrawn-text education-text">
-                  <span>Education</span>
-                  <span>Creates</span>
-                  <span>Opportunities</span>
-                  <div className="drawn-arrow">&searr;</div>
-                </div>
+            <div className="about-hero-visual">
+              <div className="visual-background-shape">
+                <div className="shape-blue"></div>
+                <div className="shape-yellow"></div>
+              </div>
+              <img src="/hero_student.png" alt="Student looking at university" className="about-student-img" />
+              
+              {/* Floating elements */}
+              <div className="floating-gs-logo">
+                 <img src="/images/GenSpark-Icon.png" alt="Gen Spark Logo" />
+              </div>
+              
+              <div className="floating-handdrawn-text">
+                <span className="drawn-learn">Learn</span>
+                <span className="drawn-grow">Grow</span>
+                <span className="drawn-succeed">Succeed</span>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="mission-section">
-        <div className="container">
-          <div className="mission-grid">
-            <div className="mission-left">
-              <div className="mission-image-wrapper">
-                <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="Students learning" className="mission-img" />
-                <div className="handdrawn-text together-text">
-                  <span>Together</span>
-                  <span>We Grow</span>
-                  <div className="drawn-arrow-down">&darr;</div>
-                </div>
-              </div>
-            </div>
-            
-            <div className="mission-right">
-              <span className="subtitle text-green">OUR MISSION</span>
-              <h2 className="section-title">Empowering Students<br/>with the Right Opportunities</h2>
-              <p className="section-desc">
-                We aim to make quality higher education accessible to every learner by collaborating with reputed universities and leveraging technology to create seamless learning and admission experiences.
-              </p>
-              
-              <div className="mv-cards">
-                <div className="mv-card">
-                  <div className="mv-icon"><Settings2 size={24} color="#3b82f6"/></div>
-                  <div className="mv-content">
-                    <h4>Our Mission</h4>
-                    <p>To bridge education and opportunity through technology, partnerships and innovation.</p>
-                  </div>
-                </div>
-                <div className="mv-card">
-                  <div className="mv-icon"><Settings size={24} color="#3b82f6"/></div>
-                  <div className="mv-content">
-                    <h4>Our Vision</h4>
-                    <p>To become a leading platform for university education and career-driven learning in India.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* Collaboration Section */}
+      <section className="collab-section">
+        <div className="container relative">
+          <div className="collab-header">
+            <span className="subtitle text-blue">OUR PARTNER UNIVERSITIES</span>
+            <h2 className="section-title">In Collaboration with<br/>Renowned <span className="text-blue">Universities</span></h2>
+            <p className="section-desc">
+              We are proud to partner with two prestigious universities — Alagappa University and Bharathidasan University — to bring you the best academic programs, expert faculty, and a trusted learning experience.
+            </p>
           </div>
-        </div>
-      </section>
+          
+          <div className="collab-drawn-text">
+            <span className="c-text-1">Prestigious</span>
+            <span className="c-text-2">Partnerships</span>
+            <span className="c-text-3">for Your Future</span>
+            <svg width="180" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg" className="c-text-underline">
+              <path d="M5 15Q40 5 115 5" stroke="#facc15" strokeWidth="3" strokeLinecap="round"/>
+            </svg>
+          </div>
 
-      {/* Impact Section */}
-      <section className="impact-section">
-        <div className="container">
-          <div className="impact-header">
-            <div className="impact-title-area">
-              <span className="subtitle text-blue">OUR IMPACT</span>
-              <h2>Numbers That<br/>Tell Our Story</h2>
-              <p>We are just getting started, and every number represents a student's dream, a course, and a step towards a better future.</p>
+          <div className="collab-cards">
+            {/* Alagappa Card */}
+            <div className="uni-card-large">
+              <div className="uni-card-img-wrapper">
+                <img src="/images/university.png" alt="Alagappa University" className="uni-building-img" />
+              </div>
+              <div className="uni-card-content">
+                <div className="uni-logo-wrapper">
+                  <img src="/images/alagappa-logo.jpg" alt="Alagappa Logo" />
+                </div>
+                <div className="uni-text">
+                  <h3>Alagappa University</h3>
+                  <div className="uni-tags">
+                    <span>Excellence</span> <span className="tag-divider">|</span> <span>Knowledge</span> <span className="tag-divider">|</span> <span>Progress</span>
+                  </div>
+                  <p>Alagappa University, established in 1985, is a renowned university in Tamil Nadu, known for its academic excellence, research and commitment to higher education.</p>
+                  <Link to="/universities/alagappa-university" className="btn btn-outline-small">Explore Courses <ArrowRight size={14}/></Link>
+                </div>
+              </div>
             </div>
-            
-            <div className="impact-stats">
-              <div className="stat-card">
-                <div className="stat-icon bg-blue-light"><GraduationCap size={28} color="#3b82f6"/></div>
-                <h3>100+</h3>
-                <h4>Courses</h4>
-                <p>Across multiple programs and disciplines.</p>
+
+            {/* Bharathidasan Card */}
+            <div className="uni-card-large">
+              <div className="uni-card-img-wrapper">
+                <img src="/images/university.png" alt="Bharathidasan University" className="uni-building-img" />
               </div>
-              <div className="stat-card">
-                <div className="stat-icon bg-blue-light"><Building2 size={28} color="#3b82f6"/></div>
-                <h3>2</h3>
-                <h4>Partner Universities</h4>
-                <p>Alagappa University & Bharathidasan University.</p>
-              </div>
-              <div className="stat-card">
-                <div className="stat-icon bg-blue-light"><User size={28} color="#3b82f6"/></div>
-                <h3>1000+</h3>
-                <h4>Students</h4>
-                <p>Already started their journey with us.</p>
-              </div>
-              <div className="stat-card">
-                <div className="stat-icon bg-blue-light"><Star size={28} color="#3b82f6"/></div>
-                <h3>100%</h3>
-                <h4>Commitment</h4>
-                <p>To your growth and success.</p>
+              <div className="uni-card-content">
+                <div className="uni-logo-wrapper">
+                  <img src="/images/bharathidasan-logo.jpg" alt="Bharathidasan Logo" />
+                </div>
+                <div className="uni-text">
+                  <h3>Bharathidasan University</h3>
+                  <div className="uni-tags">
+                    <span>Knowledge</span> <span className="tag-divider">|</span> <span>Culture</span> <span className="tag-divider">|</span> <span>Empowerment</span>
+                  </div>
+                  <p>Bharathidasan University, established in 1982, is a leading university in Tamil Nadu, celebrated for its quality education, research and contribution to society.</p>
+                  <Link to="/universities/bharathidasan-university" className="btn btn-outline-small">Explore Courses <ArrowRight size={14}/></Link>
+                </div>
               </div>
             </div>
           </div>
@@ -150,57 +126,42 @@ const About = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="why-choose-us">
+      <section className="why-choose-section">
         <div className="container">
-          <div className="wcu-grid">
-            <div className="wcu-left">
-              <span className="subtitle text-blue">WHY CHOOSE US</span>
-              <h2>More Than Just Education.<br/>It's a Partnership.</h2>
-              <p>We combine the credibility of trusted universities with the power of technology to give you a smooth, simple and supportive learning experience.</p>
-              <Link to="/courses" className="btn btn-primary">Learn More &rarr;</Link>
+          <div className="why-grid">
+            <div className="why-left">
+              <span className="subtitle text-blue">WHY CHOOSE GEN SPARK UNIVERSITY</span>
+              <h2 className="section-title">What Makes Us <span className="text-blue">Different?</span></h2>
+              <p className="section-desc">
+                We go beyond traditional education by combining trusted university programs with modern learning support, flexible access and career-focused guidance — all under one platform.
+              </p>
             </div>
             
-            <div className="wcu-features-grid">
-              <div className="wcu-feature">
-                <div className="wcu-icon bg-blue-light"><GraduationCap size={24} color="#3b82f6"/></div>
-                <div className="wcu-content">
-                  <h4>Trusted University Collaborations</h4>
-                  <p>Learn through reputed and recognized universities.</p>
+            <div className="why-right">
+              <div className="feature-grid">
+                <div className="feat-box">
+                  <div className="feat-icon"><Building2 size={28} color="#0064ff"/></div>
+                  <span>Recognized<br/>Universities</span>
                 </div>
-              </div>
-              <div className="wcu-feature">
-                <div className="wcu-icon bg-green-light"><BookOpen size={24} color="#10b981"/></div>
-                <div className="wcu-content">
-                  <h4>Career-Focused Programs</h4>
-                  <p>Courses designed for real-world opportunities.</p>
+                <div className="feat-box">
+                  <div className="feat-icon"><MonitorPlay size={28} color="#0064ff"/></div>
+                  <span>Flexible<br/>Learning Modes</span>
                 </div>
-              </div>
-              <div className="wcu-feature">
-                <div className="wcu-icon bg-purple-light"><ShieldCheck size={24} color="#8b5cf6"/></div>
-                <div className="wcu-content">
-                  <h4>Easy Admission Process</h4>
-                  <p>Simple, digital and hassle-free application.</p>
+                <div className="feat-box">
+                  <div className="feat-icon"><User size={28} color="#0064ff"/></div>
+                  <span>Expert Faculty<br/>& Mentorship</span>
                 </div>
-              </div>
-              <div className="wcu-feature">
-                <div className="wcu-icon bg-blue-light"><MonitorPlay size={24} color="#3b82f6"/></div>
-                <div className="wcu-content">
-                  <h4>Flexible Learning</h4>
-                  <p>Study at your pace, from anywhere.</p>
+                <div className="feat-box">
+                  <div className="feat-icon"><Target size={28} color="#0064ff"/></div>
+                  <span>Career<br/>Focused Programs</span>
                 </div>
-              </div>
-              <div className="wcu-feature">
-                <div className="wcu-icon bg-orange-light"><Settings size={24} color="#f59e0b"/></div>
-                <div className="wcu-content">
-                  <h4>Expert Guidance</h4>
-                  <p>Support at every step of your journey.</p>
+                <div className="feat-box">
+                  <div className="feat-icon"><Award size={28} color="#0064ff"/></div>
+                  <span>Valid University<br/>Certificates</span>
                 </div>
-              </div>
-              <div className="wcu-feature">
-                <div className="wcu-icon bg-yellow-light"><Star size={24} color="#eab308"/></div>
-                <div className="wcu-content">
-                  <h4>Affordable Education</h4>
-                  <p>Quality education at the right cost.</p>
+                <div className="feat-box">
+                  <div className="feat-icon"><HeadphonesIcon size={28} color="#0064ff"/></div>
+                  <span>Dedicated<br/>Student Support</span>
                 </div>
               </div>
             </div>
@@ -208,74 +169,51 @@ const About = () => {
         </div>
       </section>
 
-      {/* Partner Universities Section */}
-      <section className="partners-section">
+      {/* Stats Banner */}
+      <section className="stats-banner-section">
         <div className="container">
-          <div className="partners-header">
-            <div>
-              <span className="subtitle text-blue">OUR PARTNER UNIVERSITIES</span>
-              <h2>Learn Through Renowned Universities</h2>
-              <p>We are proud to collaborate with two prestigious universities to bring you quality education and recognized academic programs.</p>
+          <div className="stats-container">
+            <div className="stats-title-box">
+              <div className="stats-icon-wrapper"><GraduationCap size={32} color="#0064ff"/></div>
+              <h3>Building a Brighter<br/>Future Together</h3>
             </div>
-            <Link to="/courses" className="view-all-link">View All Universities &rarr;</Link>
-          </div>
-          
-          <div className="partners-grid-wrapper">
-            <img 
-              src="/images/collaborations.png" 
-              alt="Collaborating for a Brighter Academic Future" 
-              className="collaboration-banner-img"
-              style={{ width: '100%', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
-            />
+            <div className="stat-divider"></div>
+            <div className="stat-number-box">
+              <h2>2</h2>
+              <span>Partner Universities</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-number-box">
+              <h2>100+</h2>
+              <span>Courses Available</span>
+            </div>
+            <div className="stat-divider"></div>
+            <div className="stat-number-box">
+              <h2>1000+</h2>
+              <span>Future Learners</span>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Our Team Section */}
-      <section className="team-section">
+      {/* CTA Section */}
+      <section className="cta-banner">
+        <div className="cta-bg-image"></div>
         <div className="container">
-          <div className="team-card-gradient">
-            <div className="team-left">
-              <span className="subtitle text-white-50">OUR TEAM</span>
-              <h2>Passionate People.<br/>One Vision.</h2>
-              <p>We are a team of creators, problem solvers and education enthusiasts, working together to make a real impact.</p>
-              <button className="btn btn-white-rounded mt-4">Meet Our Team &rarr;</button>
+          <div className="cta-content">
+            <div className="cta-logo">
+              <img src="/images/GenSpark-landscape-logo.png" alt="Gen Spark" />
             </div>
-            
-            <div className="team-right">
-              <div className="handdrawn-text small-team-text">
-                <span>Small Team</span>
-                <span>Big Dreams</span>
-                <div className="drawn-arrow-curved-white">&swarrow;</div>
-              </div>
-              
-              <div className="team-members">
-                <div className="team-member">
-                  <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="CEO" />
-                  <h4>Ragul Kishore S.</h4>
-                  <span>CEO</span>
-                </div>
-                <div className="team-member">
-                  <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop" alt="Founder" />
-                  <h4>Muthurasu M.</h4>
-                  <span>Founder & MD</span>
-                </div>
-                <div className="team-member brand-member">
-                  <div className="brand-circle">N</div>
-                  <h4>Gen Z Neural X</h4>
-                  <span>Team</span>
-                </div>
-                <div className="team-member">
-                  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=200&auto=format&fit=crop" alt="Developers" />
-                  <h4>Our Developers</h4>
-                  <span>Tech Team</span>
-                </div>
-              </div>
+            <div className="cta-text">
+              <h2>Ready to <span className="text-blue-light">shape your future</span> with<br/>Gen <span className="text-blue-light">Spark University?</span></h2>
+              <p>Explore our partner universities and available courses today.</p>
+            </div>
+            <div className="cta-action">
+              <Link to="/courses" className="btn btn-primary btn-yellow">Explore Courses <ArrowRight size={16}/></Link>
             </div>
           </div>
         </div>
       </section>
-
     </div>
   );
 };
