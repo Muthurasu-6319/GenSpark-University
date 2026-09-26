@@ -17,64 +17,102 @@ const Home = () => {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
-          <div className="hero-subtitle">
-            <span className="text-blue">UNIVERSITY EDUCATION</span> • <span className="text-blue">MADE ACCESSIBLE</span>
+          <div className="hero-badge">
+            <GraduationCap size={16} className="badge-icon" /> Your Future <span className="dot">•</span> Our Mission
           </div>
           <h1 className="hero-title">
-            Build Your Future<br />
-            <span className="text-blue">Through Education.</span>
+            Learn Today,<br />
+            <span className="text-blue relative-text">Lead Tomorrow<span className="yellow-swoosh"></span></span>
           </h1>
           <p className="hero-description">
-            Explore undergraduate, postgraduate and professional programs offered through our university collaborations.
+            Gen Spark University offers quality education with<br />
+            modern learning, expert guidance and a brighter future<br />
+            for every student.
           </p>
           <div className="hero-actions">
-            <Link to="/courses" className="btn btn-primary">Explore Courses &rarr;</Link>
-            <Link to="/admissions" className="btn btn-outline">Apply Now</Link>
+            <Link to="/courses" className="btn btn-primary">Explore Courses <ArrowRight size={16} className="ml-2" /></Link>
+            <button className="btn btn-outline watch-video-btn"><div className="play-icon-wrapper"><div className="play-triangle"></div></div> Watch Video</button>
           </div>
           <div className="hero-stats">
             <div className="stat-item">
-              <div className="stat-icon-wrapper"><BookOpen className="stat-icon" size={20} color="#3b82f6" /></div>
+              <div className="stat-icon-wrapper"><GraduationCap className="stat-icon" size={24} color="#3b82f6" /></div>
               <div className="stat-text">
-                <span className="stat-value">100+</span>
-                <span className="stat-label">Courses</span>
+                <span className="stat-value">UG / PG / MBA</span>
+                <span className="stat-label">Wide Range of Courses</span>
               </div>
             </div>
+            <div className="stat-divider"></div>
             <div className="stat-item">
-              <div className="stat-icon-wrapper"><Landmark className="stat-icon" size={20} color="#3b82f6" /></div>
+              <div className="stat-icon-wrapper"><User className="stat-icon" size={24} color="#3b82f6" /></div>
               <div className="stat-text">
-                <span className="stat-value">2</span>
-                <span className="stat-label">Partner Universities</span>
+                <span className="stat-value">Expert Faculty</span>
+                <span className="stat-label">Learn from the Best</span>
               </div>
             </div>
+            <div className="stat-divider"></div>
             <div className="stat-item">
-              <div className="stat-icon-wrapper"><GraduationCap className="stat-icon" size={20} color="#3b82f6" /></div>
+              <div className="stat-icon-wrapper"><Medal className="stat-icon" size={24} color="#3b82f6" /></div>
               <div className="stat-text">
-                <span className="stat-value">1000+</span>
-                <span className="stat-label">Students</span>
+                <span className="stat-value">Trusted & Recognized</span>
+                <span className="stat-label">Build Your Career</span>
               </div>
             </div>
           </div>
         </div>
         <div className="hero-visual">
-          <div className="admissions-badge">
-            <span className="dot green-dot"></span> Admissions Open
+          <div className="floating-text-art-svg">
+            <svg width="300" height="150" viewBox="0 0 300 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <text x="20" y="40" fontFamily="Caveat, cursive" fontSize="32" fontWeight="bold" fill="#2563eb" transform="rotate(-10 20 40)">Better</text>
+              <text x="60" y="80" fontFamily="Caveat, cursive" fontSize="38" fontWeight="bold" fill="#2563eb" transform="rotate(-10 60 80)">Education</text>
+              <text x="70" y="120" fontFamily="Caveat, cursive" fontSize="32" fontWeight="bold" fill="#2563eb" transform="rotate(-10 70 120)">Brighter Future</text>
+              <path d="M70 130 Q 150 140 220 100" stroke="#facc15" strokeWidth="3" strokeDasharray="6 6" fill="none" />
+              <path d="M220 100 L 250 80 L 230 110 Z" fill="#2563eb" />
+              <path d="M220 100 L 235 95 L 230 110 Z" fill="#60a5fa" />
+              <circle cx="180" cy="85" r="4" fill="#facc15" />
+              <path d="M180 75 L 182 83 L 190 85 L 182 87 L 180 95 L 178 87 L 170 85 L 178 83 Z" fill="#facc15" />
+            </svg>
           </div>
           <div className="hero-image-wrapper">
-             <div className="hero-graphic"></div> {/* Placeholder for graduation cap and books */}
+             <img src="/girl.png" alt="Student" className="hero-graphic" />
+             <img src="/books.png" alt="Books" className="floating-books" />
           </div>
           
-          <div className="floating-card list-card">
-            <ul>
-              <li><Landmark className="icon" size={16} /> UG &rarr;</li>
-              <li><BookOpen className="icon" size={16} /> PG &rarr;</li>
-              <li><Scroll className="icon" size={16} /> Diploma &rarr;</li>
-              <li><Medal className="icon" size={16} /> Certification &rarr;</li>
-            </ul>
+          <div className="floating-card course-card">
+            <div className="card-icon bg-blue"><GraduationCap size={20} color="white" /></div>
+            <div className="card-text">
+              <strong>Multiple<br/>Courses</strong>
+              <span>UG / PG / MBA</span>
+            </div>
+            <div className="dots-container">
+               <span className="dot active"></span><span className="dot"></span><span className="dot"></span>
+            </div>
           </div>
-          
-          <div className="floating-card future-card">
-            <span>Your Future</span>
-            <strong>Our Collaboration &rarr;</strong>
+
+          <div className="floating-card admission-card">
+            <div className="card-icon text-blue"><FileText size={24} color="#3b82f6" /></div>
+            <div className="card-text">
+              <strong>Easy<br/>Admission</strong>
+              <span>Apply Online</span>
+            </div>
+             <div className="dots-container">
+               <span className="dot"></span><span className="dot active"></span><span className="dot"></span>
+            </div>
+          </div>
+
+          <div className="floating-card skill-card">
+            <div className="card-icon text-blue"><Landmark size={24} color="#3b82f6" /></div>
+            <div className="card-text">
+              <strong>Skill Based<br/>Learning</strong>
+              <span>For Real World</span>
+            </div>
+          </div>
+
+          <div className="floating-card campus-card">
+            <div className="card-icon text-blue"><Building2 size={24} color="#3b82f6" /></div>
+            <div className="card-text">
+              <strong>Modern<br/>Campus</strong>
+              <span>Safe & Supportive</span>
+            </div>
           </div>
         </div>
       </section>

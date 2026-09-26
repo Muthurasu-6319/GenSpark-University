@@ -94,8 +94,22 @@
   right: 30px;
 }
 
-.bg-red { background-color: #ef4444; }
-.bg-yellow { background-color: #eab308; }
+.alagappa-logo {
+  background-image: url('/images/alagappa-logo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  color: transparent;
+}
+.bharathidasan-logo {
+  background-image: url('/images/bharathidasan-logo.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: white;
+  color: transparent;
+}
 
 .uni-accreditation {
   position: absolute;

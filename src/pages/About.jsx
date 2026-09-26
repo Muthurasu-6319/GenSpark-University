@@ -221,38 +221,12 @@ const About = () => {
           </div>
           
           <div className="partners-grid-wrapper">
-             <div className="handdrawn-text recognized-text">
-                <span>Recognized</span>
-                <span>Universities</span>
-                <span>Quality Education</span>
-                <div className="drawn-arrow-curved">&swarrow;</div>
-             </div>
-             
-            <div className="partners-grid">
-              <div className="partner-card">
-                <div className="partner-logo alagappa-logo-bg">A</div>
-                <div className="partner-info">
-                  <h4>Alagappa University</h4>
-                  <span className="location">Tamil Nadu</span>
-                  <div className="partner-footer">
-                    <span>University Programs</span>
-                    <button className="arrow-btn">&rarr;</button>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="partner-card">
-                <div className="partner-logo bharathidasan-logo-bg">B</div>
-                <div className="partner-info">
-                  <h4>Bharathidasan University</h4>
-                  <span className="location">Tamil Nadu</span>
-                  <div className="partner-footer">
-                    <span>University Programs</span>
-                    <button className="arrow-btn">&rarr;</button>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <img 
+              src="/images/collaborations.png" 
+              alt="Collaborating for a Brighter Academic Future" 
+              className="collaboration-banner-img"
+              style={{ width: '100%', borderRadius: '16px', boxShadow: '0 10px 30px rgba(0,0,0,0.1)' }}
+            />
           </div>
         </div>
       </section>

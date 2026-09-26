@@ -38,7 +38,7 @@ const BharathidasanUniversity = () => {
       <section className="bu-hero">
         <div className="bu-hero-overlay"></div>
         <div className="container bu-hero-content">
-          <div className="bu-logo-badge">B</div>
+          <img src="/images/bharathidasan-logo.jpg" alt="Bharathidasan University Logo" className="bu-logo-image" />
           <h1>Bharathidasan University</h1>
           <p>We Will Create a Brave New World • NAAC A+ Grade</p>
           <a href="#programs" className="btn btn-white-rounded mt-4">Explore Programs <ArrowRight size={18} className="ml-2"/></a>

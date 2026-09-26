@@ -53,19 +53,15 @@
   align-items: center;
 }
 
-.bu-logo-badge {
-  width: 80px;
-  height: 80px;
-  background: white;
-  color: #2563eb;
-  font-size: 3rem;
-  font-weight: 800;
+.bu-logo-image {
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  object-fit: contain;
+  background: white;
   margin-bottom: 20px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  padding: 5px;
 }
 
 .bu-hero h1 {

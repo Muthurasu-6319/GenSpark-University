@@ -24,7 +24,7 @@ const Universities = () => {
           {/* Alagappa University */}
           <div className="uni-card">
             <div className="uni-image-side">
-              <div className="uni-logo-large bg-red">A</div>
+              <div className="uni-logo-large alagappa-logo">A</div>
               <img src="https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=800&auto=format&fit=crop" alt="Alagappa University Campus" className="uni-campus-img" />
               <div className="uni-accreditation">
                 <Award size={20} color="#eab308" />
@@ -62,7 +62,7 @@ const Universities = () => {
           {/* Bharathidasan University */}
           <div className="uni-card reverse-layout">
             <div className="uni-image-side">
-              <div className="uni-logo-large bg-yellow">B</div>
+              <div className="uni-logo-large bharathidasan-logo">B</div>
               <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=800&auto=format&fit=crop" alt="Bharathidasan University Campus" className="uni-campus-img" />
               <div className="uni-accreditation">
                 <Award size={20} color="#eab308" />

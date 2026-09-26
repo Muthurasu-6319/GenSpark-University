@@ -565,8 +565,22 @@
   color: white;
 }
 
-.alagappa-logo { background-color: #ef4444; }
-.bharathidasan-logo { background-color: #eab308; }
+.alagappa-logo { 
+  background-image: url('/images/alagappa-logo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  color: transparent;
+  border: 1px solid #e2e8f0;
+}
+.bharathidasan-logo { 
+  background-image: url('/images/bharathidasan-logo.jpg');
+  background-size: cover;
+  background-position: center;
+  background-color: white;
+  color: transparent;
+  border: 1px solid #e2e8f0;
+}
 
 .course-footer {
   display: flex;

@@ -38,7 +38,7 @@ const AlagappaUniversity = () => {
       <section className="au-hero">
         <div className="au-hero-overlay"></div>
         <div className="container au-hero-content">
-          <div className="au-logo-badge">A</div>
+          <img src="/images/alagappa-logo.jpg" alt="Alagappa University Logo" className="au-logo-image" />
           <h1>Alagappa University</h1>
           <p>Excellence in Action • NAAC A+ Graded State University</p>
           <a href="#programs" className="btn btn-white-rounded mt-4">Explore Programs <ArrowRight size={18} className="ml-2"/></a>
